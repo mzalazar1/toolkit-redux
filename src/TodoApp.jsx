@@ -6,7 +6,7 @@ export const TodoApp = () => {
 
     const [todoId, setTodoId] = useState(1);
     // const { data: todos = [], isLoading } = useGetTodosQuery();
-    const { data: todo, isLoading } = useGetTodoQuery(1);
+    const { data: todo, isLoading } = useGetTodoQuery(todoId);
 
     const nextTodo = () => {
         setTodoId(todoId + 1);
@@ -39,9 +39,9 @@ export const TodoApp = () => {
                 ))}
             </ul> */}
 
-            <button>
+            {/* <button>
                 Next Todo
-            </button>
+            </button> */}
 
         </>
     )
